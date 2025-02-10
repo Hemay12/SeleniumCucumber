@@ -40,7 +40,7 @@ jobs:
         run: mvn surefire-report:report  # Generates reports for test results
 
       - name: Upload Cucumber Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cucumber-reports
           path: target/surefire-reports  # Ensure report location matches your project
