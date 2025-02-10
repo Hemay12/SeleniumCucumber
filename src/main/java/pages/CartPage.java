@@ -1,8 +1,12 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.PropertyReader;
 import utils.commonMethods;
@@ -22,6 +26,8 @@ public class CartPage {
 	private By checkOutButton = By.id("checkout");
 	
 	public void selectCountry(String Country) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(countryDropDown));
 		Select country = new Select(driver.findElement(countryDropDown));
 		country.selectByContainsVisibleText(Country);
 	}
