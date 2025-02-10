@@ -1,16 +1,14 @@
-name: Run Selenium Cucumber BDD Tests
+name: Java CI with Maven
 
-on: 
+on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest  # Use Ubuntu for faster execution
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
@@ -19,28 +17,8 @@ jobs:
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '21'  # Change this if needed (e.g., 8, 17)
+          java-version: 21
 
-      - name: Set up Chrome and ChromeDriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-          sudo apt-get install -y chromium-chromedriver
-
-      - name: Verify Chrome and ChromeDriver
-        run: |
-          google-chrome --version
-          chromedriver --version
-
-      - name: Run Cucumber Tests with JUnit
-        run: mvn clean test  # Runs all feature files (No tag filtering)
-
-      - name: Generate Cucumber Reports
-        run: mvn surefire-report:report  # Generates reports for test results
-
-      - name: Upload Cucumber Reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: cucumber-reports
-          path: target/surefire-reports  # Ensure report location matches your project
+      - name: Build and Test with Maven
+        run: mvn clean verify
+  
