@@ -26,7 +26,7 @@ public class RegistrationSteps {
 		registerUser.clickGenderRadioButton();
 		registerUser.enterFirstName("Dummy");
 		registerUser.enterLastName("User");
-		registerUser.enterEmail("dummy12336user@gmail.com");
+		registerUser.enterEmail("dummy12337user@gmail.com");
 		registerUser.enterPassword("Dummy@123");
 		registerUser.enterConfirmPassword("Dummy@123");
 		
