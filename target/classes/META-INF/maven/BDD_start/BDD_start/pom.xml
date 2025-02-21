@@ -4,12 +4,8 @@
   <artifactId>BDD_start</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>BDD_start</name>
-<<<<<<< HEAD
-    <build>
-=======
   
    <build>
->>>>>>> 9004f93 (eclipse actions)
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -28,14 +24,8 @@
             </plugin>
         </plugins>
     </build>
-<<<<<<< HEAD
-
-
-    <dependencies>
-=======
   
   <dependencies>
->>>>>>> 9004f93 (eclipse actions)
   	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
     <groupId>io.cucumber</groupId>

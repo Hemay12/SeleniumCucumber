@@ -1,5 +1,6 @@
 Feature: User Registration
-
+	
+	@Smoke
   Scenario: Register a user
   
     Given the user is on the registration page
