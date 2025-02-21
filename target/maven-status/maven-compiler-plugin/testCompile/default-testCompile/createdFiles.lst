@@ -1,0 +1,5 @@
+stepDefinitions\CheckoutSteps.class
+stepDefinitions\Hooks.class
+stepDefinitions\LoginSteps.class
+stepDefinitions\RegistrationSteps.class
+stepDefinitions\testRunner.class

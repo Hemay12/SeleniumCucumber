@@ -1,0 +1,7 @@
+utils\commonMethods.class
+pages\LoginPage.class
+pages\CartPage.class
+pages\HomePage.class
+pages\CheckOutPage.class
+utils\PropertyReader.class
+pages\registerPage.class
